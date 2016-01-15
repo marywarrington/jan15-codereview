@@ -1,7 +1,6 @@
 $(document).ready(function() {
   $("form#questions").submit(function(event) {
-
-      $(".destination").children("div").hide();
+      $("#destination").children("div").hide();
 
       var passport = $('input[name=passport]:checked').val();
       var landscape = $('input[name=landscape]:checked').val();
@@ -14,19 +13,34 @@ $(document).ready(function() {
           if (priority === "food") {
             if (climate === "warm") {
                 $("#vietnam").show();
-              } else if (climate === "cool") {
-                  if (activities === "water") {
+              } else {
+                if (activities === "water") {
                   $("#scotland").show();
-                } else {
+                  } else {
                   $("#newzealand").show();
+                  }
                 }
-              }
-            } else if (priority === "adventure") {
+
+          } else if (priority === "adventure") {
               if (climate === "warm") {
                 if (activities === "water") {
                   $("#vietnam").show();
                 } else {
                   $("#nicaragua").show();
+              }
+            } else {
+                if (activities === "water") {
+                  $("#newzealand").show();
+                } else {
+                  $("#iceland").show();
+                }
+              }
+            } else if (priority === "relaxing") {
+              if (climate === "warm") {
+                if (activities === "water") {
+                  $("#nicaragua").show();
+                } else {
+                  $("#vietnam").show();
                 }
               } else {
                 if (activities === "water") {
@@ -34,8 +48,10 @@ $(document).ready(function() {
                 } else {
                   $("#iceland").show();
                 }
-                }
-              } else if (priority === "relaxing") {
+              }
+            }
+          } else {
+              if (priority === "food") {
                 if (climate === "warm") {
                   if (activities === "water") {
                     $("#nicaragua").show();
@@ -43,16 +59,10 @@ $(document).ready(function() {
                     $("#vietnam").show();
                   }
                 } else {
-                  if (activities === "water") {
-                    $("#newzealand").show();
-                  } else {
-                    $("#iceland").show();
-                  }
+                  $("#iceland").show();
                 }
-              }
-            } else {
-              if (landscape === "mountains") {
-                if (priority === "food") {
+              } else {
+                if (priority === "adventure") {
                   if (climate === "warm") {
                     if (activities === "water") {
                       $("#nicaragua").show();
@@ -60,48 +70,76 @@ $(document).ready(function() {
                       $("vietnam").show();
                     }
                   } else {
-                    $("#iceland").show();
-                  }
+                      if (activities === "water") {
+                        $("#scotland").show();
+                      } else {
+                        $("#iceland").show();
+                        }
+                      }
                 } else {
-                  if (priority === "adventure") {
+                  if (priority === "relaxing") {
                     if (climate === "warm") {
                       if (activities === "water") {
                         $("#nicaragua").show();
                       } else {
-                        $("vietnam").show();
+                        $("#vietnam").show();
                       }
                     } else {
-                      if (climate === "cool") {
-                        if (activities === "water") {
-                          $("#scotland").show();
-                        } else {
-                          $("#iceland").show();
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    if (priority === "relaxing") {
-                      if (climate === "warm") {
-                        if (activities === "water") {
-                          $("#nicaragua").show();
-                        } else {
-                          $("#vietnam").show();
-                        }
+                      if (activities === "water") {
+                        $("#newzealand").show();
                       } else {
-                        if (activities === "water") {
-                          $("#newzealand").show();
-                        } else {
-                          $("#iceland").show();
-                        }
+                        $("#iceland").show();
                       }
                     }
                   }
                 }
               }
             }
-          });
-
-
+          } else {
+            if (landscape === "beach") {
+            if (priority === "food") {
+              if (climate === "warm") {
+                  $("#hawaii").show();
+                } else {
+                  $("#seattle").show();
+                }
+              } else if (priority === "adventure") {
+                if (climate === "warm") {
+                    $("#hawaii").show();
+                  } else {
+                    $("#alaska").show();
+                }
+              } else {
+                if (climate === "warm") {
+                    $("#hawaii").show();
+                  } else {
+                    $("#bigsur").show();
+                  }
+                }
+              } else {
+                if (priority === "food") {
+                  if (climate === "warm") {
+                      $("#hawaii").show();
+                    } else if (activities === "water") {
+                      $("#seattle").show();
+                    } else {
+                      $("#alaska").show();
+                    }
+                  } else if (priority === "adventure") {
+                    if (climate === "warm") {
+                        $("#hawaii").show();
+                      } else {
+                        $("#alaska").show();
+                    }
+                  } else {
+                    if (climate === "warm") {
+                        $("#hawaii").show();
+                      } else {
+                        $("#alaska").show();
+                      }
+                    }
+                  }
+                }
   event.preventDefault();
+});
 });
