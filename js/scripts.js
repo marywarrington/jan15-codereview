@@ -8,7 +8,6 @@ $(document).ready(function() {
       var climate = $('input[name=climate]:checked').val();
       var activities = $('input[name=activities]:checked').val();
 
-
       if (passport === "international") {
         if (landscape === "beach") {
           if (priority === "food") {
@@ -47,9 +46,9 @@ $(document).ready(function() {
                   $("#newzealand").show();
                 } else {
                   $("#iceland").show();
+                  }
                 }
               }
-            }
           } else {
               if (priority === "food") {
                 if (climate === "warm") {
