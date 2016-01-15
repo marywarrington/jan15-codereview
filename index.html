@@ -2,14 +2,118 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
-    <link href="css/boostrap.min.css" rel="stylesheet" type="text/css" media="all">
     <script src="js/jquery-1.12.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
-    <title></title>
+    <title>Dream Vacation Generator</title>
   </head>
   <body>
+<!-- Navbar -->
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <a class="navbar-brand text-muted" href="#">Dream Vacation Generator</a>
+      </div>
+    </div>
+<!-- End navbar -->
+    <div class="container">
+      <div class="page-header">
+        <h1>Find your Dream Vacation Destination!</h1>
+      </div>
+<!-- Form -->
+      <div class="row">
+        <div class="col-md-6 quiz">
+          <div id="blanks">
+            <form id="questions">
+              <div class="form-group">
+                <label for="passport">Would you prefer an international or a domestic destination?</label>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="passport" id="international" value="international">
+                    International
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="passport" id="domestic" value="domestic">
+                    Domestic
+                  </label>
+                </div>
+              </div>
 
+              <div class="form-group">
+                <label for="landscape">Do you prefer the beach or the mountains?</label>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="landscape" id="beach" value="beach">
+                    Beach
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="landscape" id="mountains" value="mountains">
+                    Mountains
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="activity">Which of these is most important to you: Food, Adventure, or Relaxing?</label>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="activity" id="food" value="food">
+                    Food
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="activity" id="adventure" value="adventure">
+                    Adventure
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="activity" id="relaxing" value="relaxing">
+                    Relaxing
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="climate">Do you prefer a warm or a cool climate?</label>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="climate" id="warm" value="warm">
+                    Warm
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="climate" id="Cool" value="Cool">
+                    Cool
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="activities">Do you prefer water or land activities?</label>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="activities" id="water" value="water">
+                    Water
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="activities" id="land" value="land">
+                    Land
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- End Form -->
   </body>
 </html>
