@@ -6,7 +6,7 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
     <script src="js/jquery-1.12.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
     <title>Dream Vacation Generator</title>
   </head>
   <body>
@@ -23,7 +23,7 @@
       </div>
 <!-- Form -->
       <div class="row">
-        <div class="col-md-6 quiz">
+        <div class="col-sm-6 quiz">
           <div id="blanks">
             <form id="questions">
               <div class="form-group">
@@ -59,16 +59,16 @@
               </div>
 
               <div class="form-group">
-                <label for="activity">Which of these is most important to you: Food, Adventure, or Relaxing?</label>
+                <label for="priority">Which of these is most important to you: Food, Adventure, or Relaxing?</label>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="activity" id="food" value="food">
+                    <input type="radio" name="priority" id="food" value="food">
                     Food
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="activity" id="adventure" value="adventure">
+                    <input type="radio" name="priority" id="adventure" value="adventure">
                     Adventure
                   </label>
                 </div>
@@ -111,9 +111,18 @@
                   </label>
                 </div>
               </div>
-            </div>
+              <button type="submit" class="btn">Show me my vacation!</button>
+            </form>
           </div>
         </div>
 <!-- End Form -->
+      <div class="col-sm-6 destination">
+        <p id="nicaragua">Nicaragua</p>
+        <p id="newzealand">New Zealand</p>
+        <p id="scotland">Scotland</p>
+        <p id="vietnam">Vietnam</p>
+        <p id="iceland">Iceland</p>
+      </div>
+    </div>
   </body>
 </html>
