@@ -71,7 +71,7 @@ $(document).ready(function() {
                 if (activities === "water") {
                   $("#nicaragua").show();
                 } else {
-                  $("vietnam").show();
+                  $("#vietnam").show();
                 }
               } else {
                   if (activities === "water") {
