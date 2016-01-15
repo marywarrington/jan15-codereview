@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $("form#questions").submit(function(event) {
-      $("#destination").children("div").hide();
+    $("#destination").children("div").hide();
 
       var passport = $('input[name=passport]:checked').val();
       var landscape = $('input[name=landscape]:checked').val();
@@ -13,15 +13,14 @@ $(document).ready(function() {
         if (landscape === "beach") {
           if (priority === "food") {
             if (climate === "warm") {
-                $("#vietnam").show();
-              } else {
-                if (activities === "water") {
-                  $("#scotland").show();
-                  } else {
+              $("#vietnam").show();
+            } else {
+              if (activities === "water") {
+                $("#scotland").show();
+                } else {
                   $("#newzealand").show();
-                  }
                 }
-
+              }
           } else if (priority === "adventure") {
               if (climate === "warm") {
                 if (activities === "water") {
